@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:minHeight="?attr/actionBarSize"
+        app:theme= "@style/ThemeOverlay.AppCompat.ActionBar"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,11 +32,19 @@
         android:layout_margin="20dp">
 
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
    <EditText
        android:id="@+id/etName"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:hint="Your name"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:layout_width="match_parent"
@@ -44,18 +60,32 @@
         android:orientation="vertical"
         android:layout_margin="20dp">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutRepoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
     <EditText
         android:id="@+id/etRepoName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Repository Search"
         />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
     <EditText
         android:id="@+id/etLanguage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Language"
         />
+
+        </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,11 +101,18 @@
         android:layout_margin="20dp">
 
 
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutGithubUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
         <EditText
             android:id="@+id/etGithubUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Github Username"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:layout_width="match_parent"
