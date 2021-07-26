@@ -1,5 +1,6 @@
 package com.webworks.practiseapp
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,8 +23,15 @@ companion object{
 
 //        setSupportActionBar(toolbar)
     }
-    fun saveName(view: View){
+    fun saveName(view: View) {
+        if (isNotEmpty(etName, inputLayoutName)) {
+            val personName = etName.text.toString()
+            val sp = getSharedPreferences(Constants.APP_SHARED_PREFERENCES, Context.MODE_PRIVATE)
+            val editor = sp.edit()
+            editor.putString(Constants.KEY_PERSON_NAME, personName)
+            editor.apply()
 
+        }
     }
 
     fun listRepositories(view: View) {
